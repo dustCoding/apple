@@ -2,6 +2,6 @@
 
 void main()
 {
-	printf("¾È³çÇÏ¼¼¿ä. ¹Ý°©½À´Ï´Ù. Àú´Â dsut¿¡¿ä :) ÀßºÎÅ¹µå·Á¿ä !!");
+	printf("ì•ˆë…•í•˜ì„¸ìš”. ë°˜ê°‘ìŠµë‹ˆë‹¤. ì €ëŠ” dustì—ìš” :) ìž˜ë¶€íƒë“œë ¤ìš” !!");
 	return 0;
 }
