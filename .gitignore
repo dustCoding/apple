@@ -1,3 +1,7 @@
+Program.cs
+*.csproj
+
+
 # Created by https://www.toptal.com/developers/gitignore/api/git,java,eclipse,intellij,maven,gradle
 # Edit at https://www.toptal.com/developers/gitignore?templates=git,java,eclipse,intellij,maven,gradle
 
@@ -266,3 +270,7 @@ gradle-app.setting
 *.hprof
 
 # End of https://www.toptal.com/developers/gitignore/api/git,java,eclipse,intellij,maven,gradle
+
+dev-woong/week01/.idea/
+
+dev-woong/week01/obj/
