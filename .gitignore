@@ -271,6 +271,6 @@ gradle-app.setting
 
 # End of https://www.toptal.com/developers/gitignore/api/git,java,eclipse,intellij,maven,gradle
 
-dev-woong/week01/.idea/
+.idea/
 
-dev-woong/week01/obj/
+obj/
