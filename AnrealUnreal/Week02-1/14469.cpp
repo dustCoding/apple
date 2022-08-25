@@ -1,8 +1,9 @@
+//Cow
 #include <iostream>
 using namespace std;
 
 struct Cow {
-    int arrive, check; //µµÂø½Ã°£, °Ë¹®½Ã°£
+    int arrive, check; //ë„ì°©ì‹œê°„, ê²€ë¬¸ì‹œê°„
 
 };
 
@@ -12,7 +13,7 @@ int main() {
     cin.tie(0);
 
     int inputNum;
-
+    
     cin >> inputNum;
 
     Cow* CowTime = new Cow[inputNum];
@@ -21,8 +22,8 @@ int main() {
         cin >> CowTime[i].arrive >> CowTime[i].check;
     }
 
-    for (int i = 0; i < inputNum - 1; i++) {
-        for (int j = i + 1; j < inputNum; j++) {
+    for (int i = 0; i < inputNum-1; i++) {
+        for (int j = i+1; j < inputNum; j++) {
             Cow Tmp;
             if (CowTime[i].arrive > CowTime[j].arrive) {
                 Tmp = CowTime[i];
@@ -30,9 +31,9 @@ int main() {
                 CowTime[j] = Tmp;
             }
         }
-    }//arriveTimeÀ¸·Î Sort ¿Ï·á
+    }//arriveTimeìœ¼ë¡œ Sort ì™„ë£Œ
 
-    int result = CowTime[0].arrive + CowTime[0].check; //ÃÖÁ¾½Ã°£ ÃÊ±âÈ­
+    int result = CowTime[0].arrive+CowTime[0].check; //ìµœì¢…ì‹œê°„ ì´ˆê¸°í™”
 
     for (int i = 1; i < inputNum; i++) {
         if (result < CowTime[i].arrive) {
