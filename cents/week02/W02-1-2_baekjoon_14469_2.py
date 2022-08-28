@@ -40,14 +40,14 @@ arr_ts=[[*map(int,sys.stdin.readline().split())] for _ in range(num)]
 #이차원배열 정렬 lambda
 arr_ts.sort(key=lambda x:x[0])
 
-print(arr_ts)
-print(arr_ts[0])
+# print(arr_ts)
+# print(arr_ts[0])
 
 time=0
 for i in range(num):
     x,y = arr_ts[i]
-    print(x)
-    print(y)
+    # print(x)
+    # print(y)
     if time < x:
         time =x
     time+=y

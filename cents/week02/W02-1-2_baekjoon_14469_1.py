@@ -30,28 +30,29 @@
     # 모든 소가 농장에 입장하는 데 걸리는 최소 시간을 출력한다.
 
 ################################################
+
 import sys
 num = int(sys.stdin.readline())
 arr_ts=[]
 
-# arr_ts=[[*map(int,sys.stdin.readline().split())] for _ in range(num)]
 for _ in range(num):
     arr_ts.append(sys.stdin.readline().replace('\n',''))
-print(arr_ts)
+# print(arr_ts)
 
 arr_ts2 = [[0 for j in range(2)] for i in range(num)]
+
 for i in range(0,num):
     arr_ts2[i][0] = int(arr_ts[i].split(' ')[0])
     arr_ts2[i][1] = int(arr_ts[i].split(' ')[1])
-print(arr_ts2)
+# print(arr_ts2)
 
 #이차원배열 정렬 lambda
 arr_ts2.sort(key=lambda x:x[0])
 time=0
 for i in range(num):
     x,y = arr_ts2[i]
-    print(x)
-    print(y)
+    # print(x)
+    # print(y)
     if time < x:
         time =x
     time+=y
