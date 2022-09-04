@@ -8,4 +8,23 @@
 1문제니까 천천히 잘 이해해보시고 풀어보아요! 한번 잘 이해해두면 많이 도움될거에요🥸
 
 트리의 부모 찾기
-https://www.acmicpc.net/problem/11725
+https://www.acmicpc.net/problem/1172
+
+
+
+❤week03-2 과제❤
+기간 : ~09.04 PM 11:59 까지
+풀고 PR해주세요!
+
+1. 너비우선탐색 1
+https://www.acmicpc.net/problem/24444
+
+2. 깊이우선탐색 1
+https://www.acmicpc.net/problem/24479
+
+3. DFS와 BFS
+https://www.acmicpc.net/problem/1260
+
+➡️ 3번 문제를 해결하는 것을 목표로 합니다!
+(3번 문제를 먼저 풀어보고 11%에서 멈출경우 질문에서 반례모음을 참고해보세요.)
+✅ 풀 수 있는 만큼 풀어주시면 출석 인정5
