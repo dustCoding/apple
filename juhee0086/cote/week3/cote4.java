@@ -4,11 +4,6 @@ import java.util.*;
 
 public class cote4 {
     // 이진트리아니고 걍 그래프
-    public static void bfs(int root) {
-
-
-
-    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Scanner sc2 = new Scanner(System.in);
