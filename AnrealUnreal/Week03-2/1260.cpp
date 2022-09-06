@@ -68,6 +68,8 @@ int main() {
 }
 
 //DFS //DFS 오류 다시 수정할 것
+//노드 전체 방문은 하는데 방문 조건에 뭔가 문제가 있는 듯
+//중복 방문 문제 해결해야 함
 void DFSfunc(int num, vector<vector<int>> v, int arr[], queue<int> q) {
 
 	if (q.empty()) return;
@@ -81,7 +83,7 @@ void DFSfunc(int num, vector<vector<int>> v, int arr[], queue<int> q) {
 			q.push(child);
 			cout << q.front() << " ";
 			q.pop();
-			return DFSfunc(child, v, arr, q);
+			DFSfunc(child, v, arr, q);
 		}
 		//else continue;
 	}
