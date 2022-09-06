@@ -1,10 +1,13 @@
 //DFS, BFS
+//1260
 #include <iostream>
 #include <vector>
 #include <queue>
 #include <algorithm>
 
 using namespace std;
+
+int N, M, V;
 queue<int> q;
 queue<int> qu;
 void DFSfunc(int num, vector<vector<int>> v, int arr[], queue<int> q);
@@ -15,7 +18,7 @@ int main() {
 	cin.tie(0);
 	cout.tie(0);
 
-	int N, M, V;
+
 	cin >> N >> M >> V;
 
 	vector<vector<int>> v(N + 1); //
@@ -40,8 +43,14 @@ int main() {
 	arr[V] = brr[V] = -1;
 	q.push(V);
 
+	//new
+	//cout << q.back()<<" ";
+	printf("%d ", q.back());
+	//new
+	
 	DFSfunc(V, v, arr, q);
 
+	printf("\n");
 	qu.push(V);
 
 	//BFS
@@ -81,13 +90,15 @@ void DFSfunc(int num, vector<vector<int>> v, int arr[], queue<int> q) {
 		if (arr[child] == 0) {
 			arr[child] = num;
 			q.push(child);
-			cout << q.front() << " ";
+			//cout << q.back() << " ";
+			printf("%d ", q.back());
 			q.pop();
 			DFSfunc(child, v, arr, q);
+			
 		}
 		//else continue;
 	}
-	cout << q.front() << "\n";
+	//cout << q.front() << "\n";
 	q.pop();
 
 }
