@@ -1,28 +1,22 @@
-//24479 DFS
+//DFS 24479
 #include <iostream>
-#include <queue>
 #include <vector>
 #include <algorithm>
-
 using namespace std;
 
-int N, M, R;
-int cnt = 1;
-void DFSfnc(queue<int> q, vector<vector<int>> v, int arr[]);
+int visited[100001] = { 0 };
+int arr[100001] = { 0 };
+int cnt;
+vector<vector<int>> v(100001);
+void DFSfunc(int parent);
 
 int main() {
-
 	ios_base::sync_with_stdio(false);
 	cin.tie(0);
 	cout.tie(0);
 
+	int N, M, R;
 	cin >> N >> M >> R;
-
-	int* arr = new int[N + 1];
-	vector<vector<int>> v(N + 1); //
-
-	queue<int> q;
-
 
 	for (int i = 0; i < M; i++) {
 		int a, b;
@@ -32,41 +26,27 @@ int main() {
 	}
 	for (int i = 1; i < N + 1; i++) {
 		sort(v[i].begin(), v[i].end());
-		arr[i] = 0;
 	}
 
-	arr[0] = 0;
-
-	//initialiaze
-	q.push(R);
-	arr[R] = cnt;
-
-	DFSfnc(q, v, arr);
+	DFSfunc(R);
 
 	for (int i = 1; i < N + 1; i++) {
 		printf("%d ", arr[i]);
 	}
 
-
-	delete[] arr;
 	return 0;
 }
 
-void DFSfnc(queue<int> q, vector<vector<int>> v, int arr[]) {
+void DFSfunc(int parent) {
 
-	if (q.empty()) return;
+	if (visited[parent] != 0) return;
 
-	int parent = q.back();
-	int len = v[parent].size();
-	for (int i = 0; i < len; i++) {
-		if (arr[v[parent][i]] == 0) {
-			cnt++;
-			arr[v[parent][i]] = cnt;
-			q.push(v[parent][i]);
-			//q.pop();
-			DFSfnc(q, v, arr);
+		visited[parent] = 1;
+		cnt++;
+		arr[parent] = cnt;
+
+		for (int i = 0; i < v[parent].size(); i++) {
+			DFSfunc(v[parent][i]);
 		}
-	}
-	q.pop();
 
 }
